@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include header %>
+<body>
+	<% include navbar %>
+
+	<div class="container">
+		<div class="page-header">
+			<h1>
+				<%= title1 %>
+			</h1>
+			<a href="../akun/post" class="btn btn-info">Tambah Akun</a>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><center><%= title1 %></center></div>
+			<div class="panel-body">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Nama</th>
+							<th>Sandi</th>
+							<th>Email</th>
+							<th>Tanggal lahir</th>
+							<th>Aksi</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% if(data.length){
+	              for(var i = 0;i < data.length;i++) { %>
+						<tr>
+							<td><%=(i+1)%></td>
+							<td><%=data[i].username%></td>
+							<td><%=data[i].password%></td>
+							<td><%=data[i].email%></td>
+							<td><%=data[i].tanggal_lahir%></td>
+							<td>
+								<a class="" href="../akun/ubah/<%=data[i].id_akun%>">Edit</a>
+              	<a class="" href="../akun/hapus_akun/<%=data[i].id_akun%>">Delete</a>
+						  </td>
+						</tr>
+						<% }
+             }else{ %>
+                 <tr>
+                    <td colspan="3">No user</td>
+                 </tr>
+            <% } %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<hr>
+		<% include footer %>
+	</div>
+	<script src="/js/jquery.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+		src="/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "simpel_crud",
+  "version": "1.0.0",
+  "description": "express ejs jade mysql",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Mysql",
+    "nodejs"
+  ],
+  "author": "Firman Abdul Hakim",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^1.0.0",
+    "crypto": "^0.0.3",
+    "express": "^3.4.8",
+    "express-myconnection": "^1.0.4",
+    "mysql": "^2.4.1",
+    "express-load": "^1.1.14"
+  },
+  "devDependencies": {}
+}

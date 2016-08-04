@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include header %>
+<body>
+	<% include navbar %>
+
+	<div class="container">
+		<div class="page-header">
+			<h1>
+				<%= title1 %>
+			</h1>
+      <a href="/akun" class="btn btn-default">Kembali</a>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading"><%= title1 %></div>
+			<div class="panel-body">
+				<form method="post" action="/akun/ubah/<%=data[0].id_akun%>">
+					<div class="form-group col-md-6">
+						<label>Nama</label>
+						<input type="text" name="nama" class="form-control" value="<%=data[0].username%>">
+					</div>
+					<div class="form-group col-md-6">
+						<label>Sandi</label>
+						<input type="password" name="sandi" class="form-control" value="<%=data[0].password%>">
+					</div>
+					<div class="form-group col-md-6">
+						<label>Email</label>
+						<input type="email" name="email" class="form-control" value="<%=data[0].email%>">
+					</div>
+					<div class="form-group col-md-6">
+						<label>Tanggal Lahir</label>
+						<input type="date" name="tgl" class="form-control" value="<%=data[0].tanggal_lahir%>">
+					</div>
+					<div class="box-footer" style="margin-left:15px;">
+							<input class="btn btn-success" type="submit" name="submit" value="Save">
+						 </div>
+				</form>
+			</div>
+		</div>
+		<hr>
+		<% include footer %>
+	</div>
+	<script src="/js/jquery.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+		src="/js/bootstrap.min.js"></script>
+</body>
+</html>
